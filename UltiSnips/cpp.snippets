@@ -1,0 +1,22 @@
+snippet if "surround with if"
+if( ${1} )
+{
+    ${0:${VISUAL:}}
+}
+endsnippet
+
+snippet LOGE
+LOG_ERROR(${1:cString::Format("${2:Error}")});
+endsnippet
+
+snippet LOGW
+LOG_WARNING(${1:cString::Format("${2:Error}")});
+endsnippet
+
+snippet LOGI
+LOG_INFO(${1:cString::Format("${2:Error}", ${3})});
+endsnippet
+
+snippet Format
+cString::Format("${1}",${0})
+endsnippet
