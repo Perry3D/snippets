@@ -1,0 +1,25 @@
+snippet addDep "Add dependencies function with target_link_libraries"
+set(${1:TARGETDEPENDENCIES}
+    ${2:Defines}
+)
+
+add_dependencies(${3:${PROJECT_NAME}}
+    ${$1}
+    )
+
+target_link_libraries($3
+    ${$1}
+)
+endsnippet
+
+snippet mess "Show message"
+message("${1:message}")
+endsnippet
+
+snippet warn "Show warning message"
+message(WARNING "${1:message}")
+endsnippet
+
+snippet status "Show status message"
+message(STATUS "${1:message}")
+endsnippet
